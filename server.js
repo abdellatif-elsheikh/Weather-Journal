@@ -33,4 +33,19 @@ function runServer (){
 
 // Create a POST route
 
+app.post('/addWeatherData',(req,res)=>{
+    const newData = {
+        temp: req.body.temp,
+        desc: req.body.desc,
+        cityName: req.body.cityName,
+        date: req.body.date
+    };
 
+    projectData = newData;
+    res.send(projectData);
+    console.log(projectData);
+})
+
+app.get('/all', (req,res)=>{
+    res.send(projectData)
+})
