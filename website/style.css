@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* global resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: url("../1.jpg") no-repeat center center/cover;
+    letter-spacing: 1px;
+}
+
+section {
+    margin: 20px auto
+}
+
+.container{
+    width: 95%;
+    max-width: 1100px;
+    padding: 30px 10px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ccc;
+    border-radius: 7px;
+}
+/* Start feilds Section */
+.container.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #bf6e25;
+}
+
+.form-control {
+    padding: 10px 0;
+}
+
+.form-control >* {
+    display: block;
+    width: 100%;
+}
+
+.form-control label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control .input{
+    padding: 8px 20px;
+    margin:10px 0 ;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.submit {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #bf6e25;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* End feilds section */
+
+/* Start show-data section */
+
+.show-data{
+    overflow: hidden;
+}
+
+.show-data .container{
+    /* transform: translateY(-100%); */
+    text-align: center;
+}
+.show-data .container .flex{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.show-data .container .flex h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content{
+    color: #bf6e25
+}
+
+/* End show-data section */
+
+/* media quiery */
+
+@media screen and (max-width: 570px) {
+    h1{
+        font-size: 28px !important;
+    }
+    h2{
+        font-size: 22px !important;
+    }
+    h4{
+        font-size: 14px;
+    }
+    p{
+        font-size: 14px !important;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .input {
+        font-size: 14px !important;
+    }
+}
+/* End media quiery */
