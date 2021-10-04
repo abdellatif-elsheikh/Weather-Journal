@@ -32,6 +32,9 @@ function validateZip(){
 // 1- Create a function to get data from API
 const geatWeatherData = async (url='')=>{
     const request = await fetch(url);
+    if(!(request.status === 200)){
+        alert("City not found")
+    }
     try {
         const data = await request.json();
         return data
@@ -69,15 +72,20 @@ const updateUi = async (url)=>{
     const date = document.getElementById('date');
     const content = document.querySelector('.content');
 
+    const entryHolder = document.querySelector('.entryHolder');
+
     const request = await fetch(url);
+    console.log(request);
     try {
         const data = await request.json();
         console.log(data);
-        temp.innerHTML = data.temp
-        status.innerHTML = data.desc
-        cityName.innerHTML = data.cityName
-        date.innerHTML = data.date
-        content.innerHTML = feelings.value
+        temp.innerHTML = data.temp;
+        status.innerHTML = data.desc;
+        cityName.innerHTML = data.cityName;
+        date.innerHTML = data.date;
+        content.innerHTML = feelings.value;
+
+        entryHolder.style.transform = "translateY(0)"
         return data
     } catch (error) {
         console.log('error', error);

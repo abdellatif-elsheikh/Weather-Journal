@@ -82,22 +82,23 @@ section {
     overflow: hidden;
 }
 
-.show-data .container{
-    /* transform: translateY(-100%); */
+.show-data .entryHolder{
+    transition: transform .3s ease-in;
+    transform: translateY(-100%);
     text-align: center;
 }
-.show-data .container .flex{
+.show-data .entryHolder .flex{
     display: flex;
     justify-content: space-around;
     margin: 15px 0;
 }
 
-.show-data .container .flex h2{
+.show-data .entryHolder .flex h2{
     font-size: 28px;
     margin-bottom: 10px;
 }
 
-.content{
+.entryHolder .content{
     color: #bf6e25
 }
 
